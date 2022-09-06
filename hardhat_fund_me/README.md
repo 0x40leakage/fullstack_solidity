@@ -1,6 +1,10 @@
 
 https://docs.soliditylang.org/en/latest/style-guide.html
 
+https://ethereum.org/en/developers/docs/evm/opcodes/
+
+https://github.com/othneildrew/Best-README-Template
+
 ```bash
 yarn hardhat
 
