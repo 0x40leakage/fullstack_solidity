@@ -23,7 +23,7 @@ library PriceConverter {
         AggregatorV3Interface priceFeed
     ) internal view returns (uint256) {
         uint256 ethPrice = getPrice(priceFeed);
-        uint256 ethAmountInUSD = (ethPrice * ethAmount) / 1e18; // 乘了 2 此 1e18，要除掉一个
+        uint256 ethAmountInUSD = (ethPrice * ethAmount) / 1e18; // 乘了两次 1e18，要除掉一个
         return ethAmountInUSD;
     }
 }
