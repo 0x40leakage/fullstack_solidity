@@ -1,45 +1,40 @@
 
 ```bash
-yarn add --dev hardhat
 # yarn == npx
+
+yarn add --dev hardhat
+yarn add --dev prettier prettier-plugin-solidity
+yarn add --dev dotenv
+yarn add --dev hardhat-gas-reporter
+yarn add --dev solidity-coverage
+
 
 yarn hardhat
 # yarn hardhat --verbose
 
 yarn hardhat compile
-
-yarn add --dev prettier prettier-plugin-solidity
-
-yarn hardhat run scripts/deploy.js --network rinkeby
-
-yarn add --dev dotenv
-
-yarn hardhat run scripts/deploy.js --network rinkeby 
-
-yarn hardhat console --network local
-
 yarn hardhat clean
 
-yarn add --dev hardhat-gas-reporter
+# perform some task
+yarn hardhat block-number --network goerli
+yarn hardhat block-number
 
-yarn add --dev solidity-coverage
-yarn hardhat coverage
+# run tests
+GAS_REPORT=true yarn hardhat test
+yarn hardhat test --grep store
+
+# yarn hardhat coverage
+
+# execute some script; compiled automatically
+yarn hardhat run scripts/deploy.js
+yarn hardhat run scripts/deploy.js --network goerli 
+
+# starts a JSON-RPC server on top of Hardhat Network
+yarn hardhat node
+# opens a hardhat console
+yarn hardhat console --network local
 ```
 
-https://rekt.news/leaderboard/
+Attacked DeFi protocols: https://rekt.news/leaderboard/
 
-ts version: https://youtu.be/gyMwXuJrbJQ?t=35536
-
-# Sample Hardhat Project
-
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+[TypeScript version of this demo](https://youtu.be/gyMwXuJrbJQ?t=35536)

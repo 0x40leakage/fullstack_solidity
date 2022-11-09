@@ -9,7 +9,7 @@ require("./tasks/block-number")
 
 /** @type import('hardhat/config').HardhatUserConfig */
 
-const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL
+const ALCHEMY_GOERLI_API_KEY = process.env.ALCHEMY_GOERLI_API_KEY
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY
@@ -17,10 +17,11 @@ const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY
 module.exports = {
     defaultNetwork: "hardhat",
     networks: {
-        rinkeby: {
-            url: RINKEBY_RPC_URL,
+        goerli: {
+            // https://dashboard.alchemy.com/apps/6mk36imqyc58x9et
+            url: `https://eth-goerli.alchemyapi.io/v2/${ALCHEMY_GOERLI_API_KEY}`,
             accounts: [PRIVATE_KEY],
-            chainId: 4,
+            chainId: 5,
         },
         local: {
             url: "http://127.0.0.1:8545/", // yarn hardhat node

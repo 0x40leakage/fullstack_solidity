@@ -7,5 +7,5 @@ task("block-number", "Prints the current block").setAction(
     }
 )
 
-// yarn hardhat block-number --network rinkeby
+// yarn hardhat block-number --network goerli
 // yarn hardhat block-number

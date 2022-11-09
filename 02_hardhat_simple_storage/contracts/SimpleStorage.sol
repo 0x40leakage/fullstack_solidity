@@ -16,7 +16,7 @@ contract SimpleStorage {
 
     People[] public people; // dynamic array
 
-    // no need to specify data location for _favouriteNumber, Solidity just know for primitive types
+    // specify data location for _favouriteNumber (reference type)
     function addPerson(string memory _name, uint256 _favouriteNumber) public {
         people.push(People({name: _name, favouriteNumber: _favouriteNumber}));
         nameToFavouriteNumber[_name] = _favouriteNumber;

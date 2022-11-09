@@ -1,5 +1,7 @@
 const { ethers, run, network } = require("hardhat")
 
+const GOERLI_CHAIN_ID = 5
+
 async function main() {
     const SimpleStorageFactory = await ethers.getContractFactory(
         "SimpleStorage"
@@ -7,12 +9,12 @@ async function main() {
     console.log("Deploying contract...")
     const simpleStorage = await SimpleStorageFactory.deploy()
     await simpleStorage.deployed()
-    console.log(
-        `Deployed contract to: https://rinkeby.etherscan.io/address/${simpleStorage.address}`
-    )
-
-    // rinkeby
-    if (network.config.chainId === 4 && process.env.ETHERSCAN_API_KEY) {
+    
+    // goerli
+    if (network.config.chainId === GOERLI_CHAIN_ID && process.env.ETHERSCAN_API_KEY) {
+        console.log(
+            `Deployed contract to: https://goerli.etherscan.io/address/${simpleStorage.address}`
+        )
         console.log("Waiting for block txs...")
         await simpleStorage.deployTransaction.wait(6)
         await verify(simpleStorage.address, [])
@@ -51,5 +53,7 @@ main()
         process.exit(1)
     })
 
-// yarn hardhat run scripts/deploy.js --network rinkeby
-// yarn hardhat run scripts/deploy.js
+/*
+yarn hardhat run scripts/deploy.js --network goerli
+yarn hardhat run scripts/deploy.js
+*/ 

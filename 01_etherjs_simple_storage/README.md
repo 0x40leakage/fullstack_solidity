@@ -1,5 +1,7 @@
 
-[Sepolia](https://sepolia.dev/) is a proof-of-stake testnet, and is the recommended default testnet for application development.
+Testnets:
+- [Sepolia](https://sepolia.dev/) is a proof-of-stake testnet, and is the recommended default testnet for application development.
+- [Goerli](https://ethereum.org/en/developers/docs/networks/#goerli) is a proof-of-stake testnet, and is the recommended default testnet for testing of validating and staking.
 
 MetaMask log out: Log out is in top right menu, “Lock”, then you can restore from a different seed phrase if you want.
 
