@@ -3,7 +3,7 @@ require("dotenv").config()
 
 require("hardhat-deploy")
 
-const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL
+const ALCHEMY_GOERLI_API_KEY = process.env.ALCHEMY_GOERLI_API_KEY
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY
@@ -18,10 +18,11 @@ module.exports = {
             chainId: 31337,
             // gasPrice: 130000000000,
         },
-        rinkeby: {
-            url: RINKEBY_RPC_URL,
+        goerli: {
+            // https://dashboard.alchemy.com/apps/6mk36imqyc58x9et
+            url: `https://eth-goerli.alchemyapi.io/v2/${ALCHEMY_GOERLI_API_KEY}`,
             accounts: [PRIVATE_KEY],
-            chainId: 4,
+            chainId: 5,
             blockConfirmations: 6,
         },
     },

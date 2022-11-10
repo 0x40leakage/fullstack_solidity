@@ -1,7 +1,5 @@
 
 ```bash
-# yarn == npx
-
 yarn add --dev hardhat
 yarn add --dev prettier prettier-plugin-solidity
 yarn add --dev dotenv

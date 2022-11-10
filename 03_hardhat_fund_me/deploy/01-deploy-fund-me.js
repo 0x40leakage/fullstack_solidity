@@ -4,9 +4,8 @@
 
 // module.exports.default = deployFunc
 
-const { networkConfig } = require("../helper-hardhat-config")
+const { networkConfig, developmentChains } = require("../helper-hardhat-config")
 const { network } = require("hardhat")
-const { developmentChains } = require("../helper-hardhat-config")
 const { verify } = require("../utils/verify")
 
 module.exports = async (hre) => {
