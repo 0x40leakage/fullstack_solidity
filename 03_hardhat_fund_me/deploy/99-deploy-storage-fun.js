@@ -49,4 +49,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
 }
 
 module.exports.tags = ["storage"]
-// yarn hardhat deploy --tags storage
+
+/*
+yarn hardhat deploy --tags storage
+*/

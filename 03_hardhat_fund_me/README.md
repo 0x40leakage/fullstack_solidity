@@ -1,4 +1,12 @@
 
+continues at https://youtu.be/gyMwXuJrbJQ?t=43902
+
+Unit test:
+- local hardhat
+- forked hardhat
+
+vscode-Run and Debug-JavaScript Debug Terminal：断点调试
+
 ```bash
 # This is an open source project for linting Solidity code. This project provides both Security and Style Guide validations.
 yarn add --dev solhint

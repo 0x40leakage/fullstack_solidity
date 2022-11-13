@@ -12,4 +12,4 @@ constructor(uint8 _decimals, int256 _initialAnswer) public {
 }
 */
 
-// [ ] 直接 import 就够了？
+// 直接 import 和拷贝代码进来等价
