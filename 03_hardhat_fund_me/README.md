@@ -20,9 +20,6 @@ yarn add --dev hardhat-deploy
 yarn add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers
 
 yarn add --dev aave-v3-core
-
-
-
 ```
 
 [Solidity Style Guide](https://docs.soliditylang.org/en/latest/style-guide.html)
