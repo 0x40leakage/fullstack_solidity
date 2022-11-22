@@ -1,6 +1,4 @@
 
-continues at https://youtu.be/gyMwXuJrbJQ?t=44277
-
 Unit test:
 - local hardhat
 - forked hardhat
